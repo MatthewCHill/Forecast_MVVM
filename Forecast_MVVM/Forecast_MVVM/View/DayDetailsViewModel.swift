@@ -20,25 +20,24 @@ class DayDetailsViewModel {
     }
     
     private weak var delegate: DayDetailsViewModelDelegate?
+    var service: ForecastServiceable
     
-    private let networkingController: NetworkingContoller
-    
-    init(delegate: DayDetailsViewModelDelegate, networkingController: NetworkingContoller = NetworkingContoller()){
+    init(delegate: DayDetailsViewModelDelegate, forecastServiceable: ForecastServiceable = ForecastService()){
         self.delegate = delegate
-        self.networkingController = networkingController
-        fetchForcastData()
+        self.service = forecastServiceable
+        self.fetchForcastData()
     }
     
     // MARK: - Functions
-    private func fetchForcastData() {
-        NetworkingContoller.fetchDays { result in
+        func fetchForcastData() {
+            service.fetchDays(with: .cityForecast) { result in
             switch result {
                 
             case .success(let success):
                 self.forecastData = success
                 self.delegate?.updateViews()
             case .failure(let error):
-                print(error.errorDescription ?? "Unkown Error")
+                print(NetworkError.thrownError(error))
             }
         }
     }

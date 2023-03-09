@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34084CD029BA6DDB00E62E92 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34084CCF29BA6DDB00E62E92 /* APIService.swift */; };
+		34084CD229BA6F2E00E62E92 /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34084CD129BA6F2E00E62E92 /* ForecastService.swift */; };
+		34084CD429BA6FE800E62E92 /* ForecastEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34084CD329BA6FE800E62E92 /* ForecastEndpoint.swift */; };
 		3423F38B29B92A13001C4C85 /* DayDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3423F38A29B92A13001C4C85 /* DayDetailsViewModel.swift */; };
 		41978F4327B9C26C001CB2C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41978F4227B9C26C001CB2C0 /* AppDelegate.swift */; };
 		41978F4527B9C26C001CB2C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41978F4427B9C26C001CB2C0 /* SceneDelegate.swift */; };
@@ -15,12 +18,15 @@
 		41978F4F27B9C26E001CB2C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41978F4D27B9C26E001CB2C0 /* LaunchScreen.storyboard */; };
 		41978F6927B9CDCC001CB2C0 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41978F6827B9CDCC001CB2C0 /* Day.swift */; };
 		41978F6B27B9CDF2001CB2C0 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41978F6A27B9CDF2001CB2C0 /* NetworkingController.swift */; };
-		41978F6D27B9CE70001CB2C0 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41978F6C27B9CE70001CB2C0 /* ResultError.swift */; };
+		41978F6D27B9CE70001CB2C0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41978F6C27B9CE70001CB2C0 /* NetworkError.swift */; };
 		41978F6F27B9CF0A001CB2C0 /* DayForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41978F6E27B9CF0A001CB2C0 /* DayForecastTableViewCell.swift */; };
 		41978F7127B9CF46001CB2C0 /* DayDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41978F7027B9CF46001CB2C0 /* DayDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34084CCF29BA6DDB00E62E92 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		34084CD129BA6F2E00E62E92 /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
+		34084CD329BA6FE800E62E92 /* ForecastEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastEndpoint.swift; sourceTree = "<group>"; };
 		3423F38A29B92A13001C4C85 /* DayDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailsViewModel.swift; sourceTree = "<group>"; };
 		41978F3F27B9C26C001CB2C0 /* Forecast_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41978F4227B9C26C001CB2C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +37,7 @@
 		41978F5027B9C26E001CB2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41978F6827B9CDCC001CB2C0 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		41978F6A27B9CDF2001CB2C0 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
-		41978F6C27B9CE70001CB2C0 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
+		41978F6C27B9CE70001CB2C0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		41978F6E27B9CF0A001CB2C0 /* DayForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastTableViewCell.swift; sourceTree = "<group>"; };
 		41978F7027B9CF46001CB2C0 /* DayDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34084CCE29BA6DC500E62E92 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				34084CCF29BA6DDB00E62E92 /* APIService.swift */,
+				34084CD129BA6F2E00E62E92 /* ForecastService.swift */,
+				34084CD329BA6FE800E62E92 /* ForecastEndpoint.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		41978F3627B9C26C001CB2C0 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +82,7 @@
 		41978F4127B9C26C001CB2C0 /* Forecast_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				34084CCE29BA6DC500E62E92 /* Networking */,
 				41978F6527B9CDA8001CB2C0 /* Controller */,
 				41978F6427B9CDA1001CB2C0 /* Model */,
 				41978F6727B9CDB5001CB2C0 /* View */,
@@ -99,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				41978F6A27B9CDF2001CB2C0 /* NetworkingController.swift */,
-				41978F6C27B9CE70001CB2C0 /* ResultError.swift */,
+				41978F6C27B9CE70001CB2C0 /* NetworkError.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,12 +203,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				41978F6F27B9CF0A001CB2C0 /* DayForecastTableViewCell.swift in Sources */,
-				41978F6D27B9CE70001CB2C0 /* ResultError.swift in Sources */,
+				34084CD429BA6FE800E62E92 /* ForecastEndpoint.swift in Sources */,
+				41978F6D27B9CE70001CB2C0 /* NetworkError.swift in Sources */,
 				41978F4327B9C26C001CB2C0 /* AppDelegate.swift in Sources */,
 				41978F7127B9CF46001CB2C0 /* DayDetailsViewController.swift in Sources */,
 				3423F38B29B92A13001C4C85 /* DayDetailsViewModel.swift in Sources */,
 				41978F6927B9CDCC001CB2C0 /* Day.swift in Sources */,
 				41978F4527B9C26C001CB2C0 /* SceneDelegate.swift in Sources */,
+				34084CD029BA6DDB00E62E92 /* APIService.swift in Sources */,
+				34084CD229BA6F2E00E62E92 /* ForecastService.swift in Sources */,
 				41978F6B27B9CDF2001CB2C0 /* NetworkingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
